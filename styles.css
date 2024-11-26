@@ -1,0 +1,42 @@
+.nav-li-hov:hover{
+color:black
+}
+.nav-li{
+    padding: 0 10px;
+}
+.rooms{
+    display: grid;
+    grid-template-columns: 548px 548px;
+    grid-template-rows: 319px 319px;
+    gap: 20px;
+}
+.rooms:first-child{
+    grid-column: 1/2;
+    grid-row:1/3 ;
+   
+}
+.kitchen{
+    grid-column: 2/3;
+    grid-row:2/3 ;
+   
+}
+.img{
+ background-image: url('./img/Paste image(8).png');
+}
+.btn{
+    margin: 0 auto;
+}
+.freeship{
+    display: grid;
+    grid-template-columns: 152px 152px;
+    grid-template-rows: 198px 198px;
+    gap:20px
+}
+.freeship>div>h6{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+}
+.freeship>div>p{
+    color:#6c7275
+}

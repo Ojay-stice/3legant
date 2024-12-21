@@ -40,14 +40,6 @@ color:black
 .freeship>div>p{
     color:#6c7275
 }
-.accessBg{
-    background-image: url("./assets/accessories/Image\ Placeholder.svg");
-    /* background-position: center; */
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-}
 .imageBg{
     background-image: url("./assets/img/Paste\ image.png");
      background-position: center;
@@ -56,4 +48,21 @@ color:black
      width: 100%;
      height: 360px;
      
+}
+.accessBg{
+    background-image: url("./assets/accessories/Image\ Placeholder.svg");
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 820px;
+    
+}
+.bgSmall{
+    background-image: url("./assets/accessories/Paste\ image\ \(1\).png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 692px;
 }

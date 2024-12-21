@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <!-- Banner  -->
+        <section class="flex relative justify-center md:justify-around items-center w-f h-[50px] bg-black text-white" >
+              <div class="flex justify-between items-center">
+                <i class="fa-solid fa-ticket text-[20px] md:text-[22px]"></i>
+                <p class="px-2 text-xs md:text-sm">
+                  30% off storewide — Limited time!
+                </p>
+                <span class="text-[#ffab00] hidden md:block underline p-1"
+                  >Shop now <i class="fa-solid fa-arrow-right-long"></i
+                ></span>
+              </div>
+              <i class="fa-solid flex px-2 fa-xmark absolute right-[50px] text-neutral-400"></i>
+        </section>
+        <!-- NavBar section -->
+         <section class=" bg-[#ffba00]/65">
+            <nav class="flex justify-around bg-transparent ">
+               <div class="flex gap-2 justify-center items-center">
+                <i class="fas fa-bars text-[25px] md:hidden" id="ham-menu"></i>
+                <span class=" flex jusify-center items-center">3legant</span>
+               </div>
+
+                <ul class="flex gap-8 p-4">
+                   <a href=""> <li class="">Home</li></a>
+                    <a href=""><li class="">Shop</li></a>
+                    <a href=""><li class="">Product</li></a>
+                    <a href=""><li class="">Contact Us</li></a>
+                </ul>
+
+                <div class="flex gap-4 items-center p-4">
+                    <i class="fa-solid fa-magnifying-glass text-2xl"></i>
+                    <i class="fa-regular fa-user text-2xl"></i>
+                    <i class="fa-solid fa-bag-shopping text-[25px]" id="bag-icon"></i>
+                    <span
+              class="bg-black rounded-full text-white flex items-center justify-center w-6"
+              >2</span>
+                </div>
+            </nav>
+            <!-- END OF NAVBAR SECTION -->
+
+         </section>
+    </header> 
+
+    <main>
+        <!-- Hero secton -->
+         <section class="md:flex md:relative justify-center items-center  accessBg">
+          <div class="w-[538px] h-[376px] md:absolute  right-[300px] top-[300px] md:gap-[28px]">
+            <h1 class="h-[252px] md:font-semibold text-[80px] leading-[84px] tracking-[-3px]">Listen to <br> 
+              the <span class="text-[#377dff]">amazing </span>music sound.</h1>
+              <p class="mb-16"> Experience music like never before</p>
+              <a class="px-[56px] py-[12px] text-white bg-black rounded-sm" href="">Shopping now</a>
+          </div>
+
+         </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+    
+    <script src="../script2.js"></script>
+</body>
+</html>

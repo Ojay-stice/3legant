@@ -8,7 +8,7 @@ color:black
     display: grid;
     grid-template-columns: 548px 548px;
     grid-template-rows: 319px 319px;
-    gap: 20px;
+    gap: 24px;
 }
 .rooms:first-child{
     grid-column: 1/2;
@@ -40,3 +40,19 @@ color:black
 .freeship>div>p{
     color:#6c7275
 }
+.accessBg{
+    background-image: url("./assets/accessories/Image\ Placeholder.svg");
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+/* .bg-im{
+    background-image: url("./assets/img/Paste\ image.png");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     width: 100%;
+     
+} */

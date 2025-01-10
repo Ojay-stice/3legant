@@ -34,25 +34,25 @@
         </section>
         <!-- NavBar section -->
          <section class=" bg-[#ffba00]/65">
-            <nav class="flex justify-around bg-transparent ">
+            <nav class="flex justify-between px-8 md:px-0 md:justify-around bg-transparent ">
                <div class="flex gap-2 justify-center items-center">
                 <i class="fas fa-bars text-[25px] md:hidden" id="ham-menu"></i>
                 <span class=" flex jusify-center items-center">3legant</span>
                </div>
 
-                <ul class="hidden md:flex flex gap-8 p-4">
+                <ul class="hidden md:mx-8 md:flex flex gap-8 p-4">
                    <a href=""> <li class="">Home</li></a>
                     <a href=""><li class="">Shop</li></a>
                     <a href=""><li class="">Product</li></a>
                     <a href=""><li class="">Contact Us</li></a>
                 </ul>
 
-                <div class="flex gap-4 items-center p-4">
+                <div class="flex gap-2 items-center p-4 md:p-4">
                     <i class=" md:block hidden fa-solid fa-magnifying-glass text-2xl"></i>
                     <i class="md:block hidden fa-regular fa-user text-2xl"></i>
                     <i class="fa-solid fa-bag-shopping text-[25px]" id="bag-icon"></i>
                     <span
-              class="bg-black rounded-full text-white flex items-center justify-center w-6"
+              class="bg-black rounded-full text-[#ffba00] flex items-center justify-center w-6"
               >2</span>
                 </div>
             </nav>
@@ -63,14 +63,112 @@
 
     <main>
         <!-- Hero secton -->
-         <section class="flex py-6 items-start md:relative md:justify-center bgSmall  md:accessBg  md:items-center  ">
-          <div class=" md:w-[538px] h-[310px] text-center md:text-left mx-auto md:mx-0 md:h-[376px] md:absolute md:right-[150px] md:top-[160px] md:gap-[28px]">
+         <section class="bgSmall md:bg-[url('../assets/accessories/Pasteimage.png.png')] md:bg-cover md:no-repeat md:bg-contain md:h-[820px] flex py-6 items-start md:relative md:justify-center  md:items-center  ">
+          <div class=" md:w-[538px] h-[310px] text-center md:text-left mx-auto md:mx-0 md:h-[376px] md:absolute md:right-[150px] md:top-[250px] md:gap-[28px]">
             <h1 class="text-4xl w-[311px] h-[132px] leading-[44px] tracking-[-0.4px] text-center md:text-left md:h-[252px] md:w-[538px] font-semibold md:text-[80px] md:leading-[84px] md:tracking-[-3px]">Listen to <br> 
               the <span class="text-[#377dff]">amazing <br></span>music sound.</h1>
               <p class="my-3 mb-6"> Experience music like never before</p>
+              
               <a class="px-[56px]  py-[12px] text-white bg-black rounded-lg" href="">Shopping now</a>
           </div>
 
+         </section>
+         <!--  SLIDDER SECTION-->
+         <section class="h-[554px] w-full md:h-[647px] py-8 md:py-12 md:pl-[160px] pl-8">
+          <div class="flex  justify-between px-3 my-3">
+             <h2 class="text-8 font-semibold leading-12 tracking-[-0.4px]">New Arrivals</h2>
+             <div  ><span class="cursor-pointer" id="back">o</span> <span>o</span> <span  class="cursor-pointer" id="next">o</span></div>
+            </div>
+
+          <div class="scroll-wrapper">
+              <d iv class="scroll-container w-full">
+
+                <div class="scroll-item">
+                  <div class="card-item relative w-[231px] md:w-[262px]">
+                    <span class="flex justify-between absolute">
+                      <p class="absolute text-[16px] left-[16px] bg-white py-1 px-3 top-[16px]">New</p>
+                      <i class="favorite fa-regular fa-heart text-[16px] absolute bg-white p-2 rounded-full top-[16px] md:left-[190px] left-[183px]"></i>
+                    </span>
+                    <img class="" src="../assets/accessories/accessoryImages/Paste image.png" alt="">
+                    <button class=" btn absolute w-[202px] top-[253.2px] left-[13px]  md:top-[287px] md:left-[14px] md:h-[40.58px] md:w-[230px] py-2 bg-black text-white px-[24px] rounded-xl">Add to Cart</button>
+                    <div class="md:w-262px w-[231px]">
+                      <p><i class=" fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                      <p>Skullcandy - Crusher anc 2 wireless headphones</p>
+                      <p>$299.99</p>
+                    </div>
+                  </div>
+  
+                  <div class="card-item relative w-[231px] md:w-[262px]">
+                    <span class="flex justify-between absolute">
+                      <p class="absolute text-[16px] left-[16px] bg-white py-1 px-3 top-[16px]">New</p>
+                      <i class="favorite fa-regular fa-heart text-[16px] absolute bg-white p-2 rounded-full top-[16px] md:left-[190px] left-[183px]"></i>
+                    </span>
+                    <img class="" src="../assets/accessories/accessoryImages/Paste image (11).png" alt="">
+                    <button class="btn absolute w-[202px] top-[253.2px] left-[13px]   md:top-[287px] md:left-[14px] md:h-[40.58px] md:w-[230px] py-2 bg-black text-white px-[24px] rounded-xl">Add to Cart</button>
+                    <div class="md:w-262px w-[231px]">
+                      <p><i class=" fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                      <p>Beats</p>
+                      <p>Studio Pro</p>
+                      <p>$349.99</p>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+               <div class="scroll-item">
+                <div class="card-item relative w-[231px] md:w-[262px]">
+                  <span class="flex justify-between absolute">
+                    <p class="absolute text-[16px] left-[16px] bg-white py-1 px-3 top-[16px]">New</p>
+                    <i class="favorite fa-regular fa-heart text-[16px] absolute bg-white p-2 rounded-full top-[16px] md:left-[190px] left-[183px]"></i>
+                  </span>
+                  <img class="" src="../assets/accessories/accessoryImages/Image Placeholder.png" alt="">
+                  <button class="btn absolute w-[202px] top-[253.2px] left-[13px]   md:top-[287px] md:left-[14px] md:h-[40.58px] md:w-[230px] py-2 bg-black text-white px-[24px] rounded-xl">Add to Cart</button>
+                  <div class="md:w-262px w-[231px]">
+                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                    <p>Sony - WH-CH720N Wireless </p>
+                    <p>Noise Canceling</p>
+                    <p>$149.99</p>
+                  </div>
+                </div>
+
+                <div class="card-item relative w-[231px] md:w-[262px]">
+                  <span class="flex justify-between absolute">
+                    <p class="absolute text-[16px] left-[16px] bg-white py-1 px-3 top-[16px]">New</p>
+                    <i class="favorite fa-regular fa-heart text-[16px] absolute bg-white p-2 rounded-full top-[16px] md:left-[190px] left-[183px]"></i>
+                  </span>
+                  <img class="" src="../assets/accessories/accessoryImages/Image Placeholder (2).png" alt="">
+                  <button class="btn absolute w-[202px] top-[253.2px] left-[13px]   md:top-[287px] md:left-[14px] md:h-[40.58px] md:w-[230px] py-2 bg-black text-white px-[24px] rounded-xl">Add to Cart</button>
+                  <div class="md:w-262px w-[231px]">
+                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                    <p>Skullcandy - Rail True Wireless</p>
+                    <p> Earbuds</p>
+                    <p>$79.99</p>
+                  </div>
+                </div>
+               </div>
+
+               <div class="scroll-item">
+                <div class="card-item relative w-[231px] md:w-[262px]">
+                  <span class="flex justify-between absolute">
+                    <p class="absolute text-[16px] left-[16px] bg-white py-1 px-3 top-[16px]">New</p>
+                    <i class="favorite fa-regular fa-heart text-[16px] absolute bg-white p-2 rounded-full top-[16px] md:left-[190px] left-[183px]"></i>
+                  </span>
+                  <img class="" src="../assets/accessories/accessoryImages/Image Placeholder (3).png" alt="">
+                  <button class="btn absolute w-[202px] top-[253.2px] left-[13px]   md:top-[287px] md:left-[14px] md:h-[40.58px] md:w-[230px] py-2 bg-black text-white px-[24px] rounded-xl">Add to Cart</button>
+                  <div class="md:w-262px w-[231px]">
+                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                    <p>Beats</p>
+                    <p>Studio</p>
+                    <p>$224.99</p>
+                  </div>
+                </div>
+               </div>
+
+                
+
+               
+
+              </d>
+          </div>
          </section>
 
     </main>

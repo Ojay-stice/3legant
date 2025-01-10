@@ -47,3 +47,21 @@ itemCardHover.forEach((item) => {
         heartCardHover.style.display = 'none';
     })
 });
+
+let prevArrow = document.querySelector('.arrow-left');
+let nextArrow = document.querySelector('.arrow-right');
+let logoContainer = document.querySelector('.logo-holder');
+
+logoContainer.addEventListener('wheel',(event)=>{
+    logoContainer.style.scrollBehavior = 'smooth'
+    logoContainer.scrollLeft += event.deltaY
+})
+prevArrow.addEventListener('click',()=>{
+    logoContainer.style.scrollBehavior = 'smooth'
+    logoContainer.scrollLeft -= 376 
+})
+
+nextArrow.addEventListener('click',()=>{
+    logoContainer.style.scrollBehavior = 'smooth'
+    logoContainer.scrollLeft += 376 
+})

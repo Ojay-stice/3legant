@@ -83,3 +83,10 @@ overflow-x: scroll;
 .scroll-container::-webkit-scrollbar{
     display: none;
 }
+.logo-holder{
+    display: flex;
+    overflow-x: scroll; 
+}
+.logo-holder::-webkit-scrollbar{
+    display: none;
+}

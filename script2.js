@@ -10,16 +10,16 @@ scrollDiv.addEventListener('wheel',(event)=>{
 
 prevBtn.addEventListener('click', ()=>{
     scrollDiv.style.scrollBehavior = 'smooth'
-    scrollDiv.scrollLeft -= 100
+    scrollDiv.scrollLeft -= 150
 })
 
 nextBtn.addEventListener('click', ()=>{
      scrollDiv.style.scrollBehavior = 'smooth'
-    scrollDiv.scrollLeft += 100
+    scrollDiv.scrollLeft += 150
 })
 
 setInterval(()=>{
-    scrollDiv.scrollLeft += 100
+    scrollDiv.scrollLeft += 150
 
     if(scrollDiv.scrollLeft + scrollDiv.offsetWidth >= scrollDiv.scrollWidth){
         scrollDiv.scrollLeft = 0
@@ -40,6 +40,8 @@ itemCardHover.forEach((item) => {
     item.addEventListener('mouseover',()=>{
         btnCardHover.style.display = 'block'
         heartCardHover.style.display = 'block';
+        
+
     })
 
     item.addEventListener('mouseout',()=>{
@@ -64,4 +66,5 @@ prevArrow.addEventListener('click',()=>{
 nextArrow.addEventListener('click',()=>{
     logoContainer.style.scrollBehavior = 'smooth'
     logoContainer.scrollLeft += 376 
+
 })

@@ -34,8 +34,8 @@ itemCardHover.forEach((item) => {
     let btnCardHover = item.querySelector('.btn')
     let heartCardHover = item.querySelector('.favorite')
 
-    btnCardHover.style.display = 'none'
-    heartCardHover.style.display = 'none';
+    btnCardHover.style.display = 'block'
+    heartCardHover.style.display = 'block';
 
     item.addEventListener('mouseover',()=>{
         btnCardHover.style.display = 'block'

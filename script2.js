@@ -26,16 +26,16 @@ setInterval(()=>{
     }
 },5000)
 
-let itemCardHover = document.querySelectorAll('.card-item');
-// let btnCardHover = document.querySelectorAll('.btn');
-// let heartCardHover = document.querySelectorAll('.favorite');
+document.addEventListener('DOMContentLoaded', ()=>{
+    let itemCardHover = document.querySelectorAll('.card-item');
+
 
 itemCardHover.forEach((item) => {
     let btnCardHover = item.querySelector('.btn')
     let heartCardHover = item.querySelector('.favorite')
 
-    btnCardHover.style.display = 'block'
-    heartCardHover.style.display = 'block';
+    btnCardHover.style.display = 'none'
+    heartCardHover.style.display = 'none';
 
     item.addEventListener('mouseover',()=>{
         btnCardHover.style.display = 'block'
@@ -49,22 +49,26 @@ itemCardHover.forEach((item) => {
         heartCardHover.style.display = 'none';
     })
 });
+})
 
-let prevArrow = document.querySelector('.arrow-left');
-let nextArrow = document.querySelector('.arrow-right');
-let logoContainer = document.querySelector('.logo-holder');
+
+let prevArrow = document.getElementById('prevArrow');
+let nextArrow = document.getElementById('nextArrow');
+let logoContainer = document.querySelector('.logo-cards');
+
+const scrollAmount = logoContainer.scrollWidth / logoContainer.childElementCount;
 
 logoContainer.addEventListener('wheel',(event)=>{
-    logoContainer.style.scrollBehavior = 'smooth'
     logoContainer.scrollLeft += event.deltaY
-})
-prevArrow.addEventListener('click',()=>{
-    logoContainer.style.scrollBehavior = 'smooth'
-    logoContainer.scrollLeft -= 376 
 })
 
 nextArrow.addEventListener('click',()=>{
-    logoContainer.style.scrollBehavior = 'smooth'
-    logoContainer.scrollLeft += 376 
-
+    logoContainer.scrollLeft += scrollAmount
 })
+
+prevArrow.addEventListener('click',()=>{
+    logoContainer.scrollLeft -= scrollAmount
+})
+console.log(nextArrow)
+console.log('hello world')
+

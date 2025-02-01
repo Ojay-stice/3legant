@@ -20,7 +20,7 @@
 <body>
     <header>
         <!-- Banner  -->
-        <section class="flex relative justify-center md:justify-around items-center w-full h-[50px] bg-black text-white" >
+        <section id="bannerContainer" class="flex relative justify-center md:justify-around items-center w-full h-[50px] bg-black text-white" >
               <div class="flex justify-between items-center">
                 <i class="fa-solid fa-ticket text-[20px] md:text-[22px]"></i>
                 <p class="px-2 text-xs md:text-sm">
@@ -30,14 +30,14 @@
                   >Shop now <i class="fa-solid fa-arrow-right-long"></i
                 ></span>
               </div>
-              <i class="fa-solid flex px-2 fa-xmark absolute right-[50px] text-neutral-400"></i>
+              <i  class="fa-solid flex px-2 fa-xmark absolute right-[50px] text-neutral-400" onclick="removeBanner('bannerContainer')"></i>
         </section>
         <!-- NavBar section -->
          <section class=" bg-[#ffba00]/65">
             <nav class="flex justify-between px-8 md:px-0 md:justify-around bg-transparent ">
                <div class="flex gap-2 justify-center items-center">
-                <i class="fas fa-bars text-[25px] md:hidden" id="ham-menu"></i>
-                <span class=" flex jusify-center items-center">3legant</span>
+                <i class="fas fa-bars text-[25px] md:hidden" id="ham-menu" onclick="hamMenuIcon('ham-menu')"></i>
+                <span class=" flex jusify-center items-center"><a href="../index.html">3legant</a></span>
                </div>
 
                 <ul class="hidden md:mx-8 md:flex flex gap-8 p-4">
@@ -56,6 +56,97 @@
               >2</span>
                 </div>
             </nav>
+
+             <!-- START OF MOBILE MENU DIV -->
+        <div
+        id="nav-menu"
+        class="z-10 md:hidden transition-500 duration-700 ease-in-out delay-200 border px-5 absolute top-0 w-full bg-white h-[100%] left-[-100vw] flex flex-col justify-between"
+      >
+        <div>
+          <div class="flex justify-between items-center py-3">
+            <a
+              href="../index.html"
+              class="text-xl py-3 font-semibold md:text-2xl md:font-medium"
+              >3legant.</a
+            >
+            <i id="close-icon" class="fa-solid flex px-3 fa-xmark border" onclick="removeMobileNav('close-icon')" ></i>
+          </div>
+          <!-- SEARCH/INPUTS BUTTON-->
+          <form
+            action=""
+            class="flex border px-4 py-2 my-2 rounded-xl gap-3 items-center"
+          >
+            <button type="submit" class="bg-transparent">
+              <i class="fa-solid fa-magnifying-glass text-[25px]"></i>
+            </button>
+            <input
+              type="text"
+              placeholder="Search"
+              name=""
+              id=""
+              class="w-full"
+            />
+          </form>
+          <!-- NAV LINKS -->
+          <ul class="flex flex-col gap-2 ">
+            <li class="border-b py-3"><a href="/">Home</a></li>
+            <li class="border-b py-3 flex justify-between items-center" onclick="shopLinkMenu('shop-link')"><a href="">Shop</a><i class="fa-solid fa-angle-down"></i></li>
+            <div id="shop-link" class="flex flex-col items-start absolute transition-500 duration-700 ease-in-out delay-200 top-[200px] w-[412px] h-[200px] bg-black text-white left-[-100vw]">
+              <ul class="p-4">
+                <li class="py-3 px-12 text-xl"><a href="../pages/accessories.html">Accessories</a></li>
+                <li class="py-3 px-12 text-xl"><a href="">Sports</a></li>
+                <li class="py-3 px-12 text-xl"><a href="">Clothing</a></li>
+              </ul>
+            </div>
+            <li class="border-b py-3 flex justify-between items-center"><a href="">Production</a><i class="fa-solid fa-angle-down"></i></li>
+            <li class="border-b py-3"><a href="">Contact Us</a></li>
+          </ul>
+        </div>
+          <!-- BOTTOM DIV -->
+        <div>
+
+          <!--BOTTOM DIV NAV LINKS -->
+          <ul class="flex flex-col gap-2 ">
+            <li class="border-b py-3 flex justify-between items-center"><a href="">Cart</a>
+              <div class="flex gap-2">
+                <i class="fa-solid fa-bag-shopping text-[25px]" id="bag-icon"></i>
+              <span
+            class="bg-black rounded-full text-white flex items-center justify-center w-6"
+            >2</span>
+              </div>
+            </li>
+
+            <li class="border-b py-3 flex justify-between items-center"><a href="">Wishlist</a>
+              <div class="flex gap-2">
+                <i class="fa-regular fa-heart text-[25px]"></i>
+              <span
+            class="bg-black rounded-full text-white flex items-center justify-center w-6"
+            >2</span>
+              </div>
+            </li>
+          </ul>
+          <button class="bg-black w-full text-center text-white py-4 rounded-lg mt-3">Sign In</button>
+          <div>
+            <div class="flex items-center gap-6 mt-4">
+              <a href="" class="cursor-pointer">
+                <i class="fa-brands fa-instagram text-[26px]"></i>
+              </a>
+              <a href="" class="cursor-pointer">
+                <i
+                  class="fa-brands fa-facebook-f text-[26px]"
+                  style="color: blue"
+                ></i>
+              </a>
+              <a href="" class="cursor-pointer">
+                <i
+                  class="fa-brands fa-youtube text-[26px]"
+                  style="color: red"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
             <!-- END OF NAVBAR SECTION -->
 
          </section>
@@ -77,23 +168,27 @@
           <section>
             <div class="">
               
-              <div class="logo-holder md:flex gap-4  py-[24px] px-[32px] md:px-[160px] md:py-[40px]">
-                <div class="logo grid grid-cols-6 flex-none gap-4"> 
-                <span><img class="block" src="../assets/accessories/logo 01.svg" alt=""></span>
-                <span><img class="block" src="../assets/accessories/logo 04.svg" alt=""></span>
-                <span><img class="block" src="../assets/accessories/logo 03.svg" alt=""></span>
-             
-                <span><img class="block" src="../assets/accessories/logo 02.svg" alt=""></span>
-                <span><img class="block" src="../assets/accessories/logo 05.svg" alt=""></span>
-                <span><img class="block" src="../assets/accessories/logo 6.svg" alt=""></span>
-              </div>
-              </div>
+              
+                <div class="logo-cards flex w-full overflow-scroll gap-4 md:px-[160px]">
+                <div class="logo-item  grid grid-cols-2 flex-none">
+                  <span><img class="block" src="../assets/accessories/logo 01.svg" alt=""></span>
+                  <span><img class="block" src="../assets/accessories/logo 04.svg" alt=""></span>
+                </div>
+                <div class="logo-item grid grid-cols-2 flex-none">
+                  <span><img class="block" src="../assets/accessories/logo 03.svg" alt=""></span>
+                  <span><img class="block" src="../assets/accessories/logo 02.svg" alt=""></span>
+                </div>
+                <div class="logo-item grid grid-cols-2 flex-none">
+                  <span><img class="block" src="../assets/accessories/logo 05.svg" alt=""></span>
+                  <span><img class="block" src="../assets/accessories/logo 6.svg" alt=""></span>
+                </div>
+                  </div>
 
-              <div class="arrows flex justify-center md:hidden">
-                <span class="flex gap-5">
-                  <i class="arrow-left fa-solid fa-arrow-left-long"></i>
-                <i class="arrow-right fa-solid fa-arrow-right-long"></i>
-                </span>
+              <div class="arrows gap-5 flex justify-center md:hidden">
+                
+                <span id="prevArrow" ><i class=" fa-solid fa-arrow-left-long"></i></span>
+                <span  id="nextArrow"><i class=" fa-solid fa-arrow-right-long" ></i></span>
+
               </div>
             </div>
           </section>
@@ -219,11 +314,13 @@
          </section>
 
          <!-- BEST SELLER SECTION -->
-          <section>
-            <h5 class="md:px-[160px] px-12 py-10">Best Sellers</h5>
-            <div class="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-x-4 md:gap-10  px-8 md:px-[160px]"> 
+          <section class="px-[40px] py-[32px] w-[375px] md:w-[1440px]  md:mx-auto md:pl-[160px] md:pt-[48px] md:pb-[100px] md:gap[48px]">
+            <h4 class="  md:text-[40px] md:leading-[44px]  md:w-[1120px]">Best Sellers</h4>
+            <div class="w-[345px] flex gap-[16px] flex-wrap    md:w-[1120px]  md:grid md:grid-cols-4 md:gap-[24px] md:justify-center "> 
 
 
+             <!-- <div class="border w-[312px] h-[1172px] items-center justify-center md:flex gap-[16px] md:w-[1120px] md:h-[459px] md:gap-[24px]"> -->
+             
               <div class="card-item relative w-[152px] md:w-[262px]">
                 <span class="flex justify-between absolute">
                   <p class="absolute  text-[16px] md:left-[16px] bg-white py-1 px-3 md:top-[16px] top-[14px] left-[14px]">New</p>
@@ -284,61 +381,67 @@
               </div>
             </div>
 
-            <div class="card-item relative w-[152px] md:w-[262px]">
-              <span class="flex justify-between absolute">
-                <p class="absolute text-[16px] md:left-[16px] bg-white py-1 px-3 md:top-[16px] top-[14px] left-[14px]">New</p>
-                
-              </span>
-              <img class="w-[152px] md:w-[262px]" src="../assets/accessories/accessoryImages/Paste image.png" alt="">
-            
-              <div class="md:w-[262px] w-[152px]">
-                <p><i class=" fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
-                <p>Skullcandy - Crusher anc 2 wireless headphones</p>
-                <p>$299.99</p>
-              </div>
-            </div>
+             <!-- </div> -->
 
-            <div class="card-item relative w-[152px] md:w-[262px]">
-              <span class="flex justify-between absolute">
-                <p class="absolute text-[16px] md:left-[16px] bg-white py-1 px-3 md:top-[16px] top-[14px] left-[14px]">New</p>
-                
-              </span>
-              <img class="w-[152px] md:w-[262px]" src="../assets/accessories/accessoryImages/Paste image.png" alt="">
-            
-              <div class="md:w-[262px]  w-[152px]">
-                <p><i class=" fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
-                <p>Skullcandy - Crusher anc 2 wireless headphones</p>
-                <p>$299.99</p>
-              </div>
-            </div>
 
-            <div class="card-item  relative w-[152px] md:w-[262px]">
-              <span class="flex justify-between absolute">
-                <p class="absolute text-[16px] md:left-[16px] bg-white py-1 px-3 md:top-[16px] top-[14px] left-[14px]md:">New</p>
-                
-              </span>
-              <img class="w-[152px] md:w-[262px]" src="../assets/accessories/accessoryImages/Paste image.png" alt="">
-            
-              <div class="md:w-[262px]  w-[152px]">
-                <p><i class=" fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
-                <p>Skullcandy - Crusher anc 2 wireless headphones</p>
-                <p>$299.99</p>
+            <!-- <div class="border w-[312px] h-[1172px] items-center justify-center md:flex gap-3 md:w-[1120px] md:h-[459px] md:gap-[24px]"> -->
+              
+              <div class="card-item relative w-[152px] md:w-[262px]">
+                <span class="flex justify-between absolute">
+                  <p class="absolute text-[16px] md:left-[16px] bg-white py-1 px-3 md:top-[16px] top-[14px] left-[14px]">New</p>
+                  
+                </span>
+                <img class="w-[152px] md:w-[262px]" src="../assets/accessories/accessoryImages/Paste image.png" alt="">
+              
+                <div class="md:w-[262px] w-[152px]">
+                  <p><i class=" fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                  <p>Skullcandy - Crusher anc 2 wireless headphones</p>
+                  <p>$299.99</p>
+                </div>
               </div>
-            </div>
-
-            <div class=" card-item relative w-[152px] md:w-[262px]">
-              <span class="flex justify-between absolute">
-                <p class="absolute text-[16px] md:left-[16px] bg-white py-1 px-3 md:top-[16px] top-[14px] left-[14px]">New</p>
-                
-              </span>
-              <img class="w-[152px] md:w-[262px]" src="../assets/accessories/accessoryImages/Paste image.png" alt="">
-            
-              <div class="md:w-[262px]  w-[152px]">
-                <p><i class=" fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
-                <p>Skullcandy - Crusher anc 2 wireless headphones</p>
-                <p>$299.99</p>
+  
+              <div class="card-item relative w-[152px] md:w-[262px]">
+                <span class="flex justify-between absolute">
+                  <p class="absolute text-[16px] md:left-[16px] bg-white py-1 px-3 md:top-[16px] top-[14px] left-[14px]">New</p>
+                  
+                </span>
+                <img class="w-[152px] md:w-[262px]" src="../assets/accessories/accessoryImages/Paste image.png" alt="">
+              
+                <div class="md:w-[262px]  w-[152px]">
+                  <p><i class=" fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                  <p>Skullcandy - Crusher anc 2 wireless headphones</p>
+                  <p>$299.99</p>
+                </div>
               </div>
-            </div>
+  
+              <div class="card-item  relative w-[152px] md:w-[262px]">
+                <span class="flex justify-between absolute">
+                  <p class="absolute text-[16px] md:left-[16px] bg-white py-1 px-3 md:top-[16px] top-[14px] left-[14px]md:">New</p>
+                  
+                </span>
+                <img class="w-[152px] md:w-[262px]" src="../assets/accessories/accessoryImages/Paste image.png" alt="">
+              
+                <div class="md:w-[262px]  w-[152px]">
+                  <p><i class=" fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                  <p>Skullcandy - Crusher anc 2 wireless headphones</p>
+                  <p>$299.99</p>
+                </div>
+              </div>
+  
+              <div class=" card-item relative w-[152px] md:w-[262px]">
+                <span class="flex justify-between absolute">
+                  <p class="absolute text-[16px] md:left-[16px] bg-white py-1 px-3 md:top-[16px] top-[14px] left-[14px]">New</p>
+                  
+                </span>
+                <img class="w-[152px] md:w-[262px]" src="../assets/accessories/accessoryImages/Paste image.png" alt="">
+              
+                <div class="md:w-[262px]  w-[152px]">
+                  <p><i class=" fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                  <p>Skullcandy - Crusher anc 2 wireless headphones</p>
+                  <p>$299.99</p>
+                </div>
+              </div>
+              <!-- </div> -->
             </div>
 
           </section>
@@ -349,6 +452,7 @@
 
     </footer>
     
+    <script src="../script.js"></script>
     <script src="../script2.js"></script>
 </body>
 </html>

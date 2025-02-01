@@ -4,7 +4,7 @@ let closeIcon = document.getElementById("close-icon");
 let userIcon = document.getElementById("user-icon");
 let bagIcon = document.getElementById("bag-icon");
 let navBar = document.getElementById("nav-menu");
-let hamMenuIcon = document.getElementById("ham-menu");
+// let hamMenuIcon = document.getElementById("ham-menu");
 
 
 
@@ -28,19 +28,77 @@ function showMenu() {
   menu.classList.remove("hidden");
 }
 
-hamMenuIcon.addEventListener("click", () => {
-  navBar.classList.toggle("left-[0%]");
-  closeIcon.classList.toggle("hidden");
-  // bagIcon.classList.toggle("hidden");
-  // userIcon.classList.toggle("hidden");
-  // searchButton.classList.toggle("hidden");
-  hamMenuIcon.classList.toggle("hidden");
+function hamMenuIcon(elementId){
+  let menuIcon = document.getElementById(elementId)
+  if(menuIcon && navBar){
+
+    navBar.classList.toggle('left-[0%]')
+   navBar.classList.remove("hidden");
+  }
+}
+
+function removeMobileNav(mobileDivId){
+  let navContainer = document.getElementById(mobileDivId)
+  if(navContainer){
+    navBar.classList.toggle('left-[-100%]')
+    // hamMenuIcon.classList.remove("hidden");
+        closeIcon.style.color = 'red'
+        console.log('close icon was clicked')
+        console.log('this was clicked')
+  }
+}
+
+function shopLinkMenu(elementId){
+  let shopLinks = document.getElementById(elementId)
+  shopLinks.classList.toggle('left-[0]')
+}
+
+
+let carouselCard = document.querySelectorAll('.carousel-item');
+
+
+carouselCard.forEach((item)=>{
+  let cardBtn = item.querySelector('.cartBtn');
+  let cardHeart = item.querySelector('.addFav');
+
+cardBtn.style.display = 'none'
+cardHeart.style.display = 'none'
+
+item.addEventListener('mouseover',()=>{
+  cardBtn.style.display = 'block'
+cardHeart.style.display = 'block'
+});
+
+item.addEventListener('mouseleave',()=>{
+  cardBtn.style.display = 'none'
+  cardHeart.style.display = 'none'
+});
+
 });
 
 
-closeIcon.addEventListener("click", () => {
-  closeIcon.classList.toggle("hidden");
-  hamMenuIcon.classList.toggle("hidden");
-  navBar.classList.toggle("left-[0%]");
-})
+
+function removeBanner(elementContainer){
+  let xContainer = document.getElementById(elementContainer);
+  // let xMark = document.getElementById(elementId);
+  
+  if(xContainer) {
+    xContainer.style.display = "none";
+  }
+  // xMark.addEventListener('click', ()=>{
+  //   xContainer.remove()
+  //   console.log(xMark, xContainer);
+  //   console.log("closed!");
+  // })
+}
+// removeBanner({
+//   elementContainer:'banner-container',
+//   elementId: 'x-mark'
+//  })
+
+//  removeBanner({
+//   elementContainer:'bannerContainer',
+//   elementId: 'xMarky'
+//  })
+
 

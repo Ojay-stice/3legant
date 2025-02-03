@@ -49,6 +49,15 @@ color:black
      height: 360px;
      
 }
+.imageBg2{
+    background-image: url("./assets/accessories/longBg.png");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     width: 100%;
+     height: 360px;
+     
+}
 /* .accessBg{
     
     background-image: url("./assets/accessories/Image\ Placeholder.svg");
@@ -93,4 +102,11 @@ overflow-x: scroll;
 }
 .logo-cards::-webkit-scrollbar{
 display: none;
+}
+.bg-img{
+    background-image: url('./assets/accessories/Paste\ image\ \(2\).png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
 }
